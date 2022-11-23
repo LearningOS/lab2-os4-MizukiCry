@@ -18,6 +18,7 @@ pub fn set_next_trigger() {
 }
 
 pub fn get_time_ms() -> usize {
-    let t = get_time();
-    (t / CLOCK_FREQ & 0xffff) * 1000 + (t / (CLOCK_FREQ / 1_000_000) % 1_000_000 / 1000)
+    //let t = get_time();
+    //(t / CLOCK_FREQ & 0xffff) * 1000 + (t / (CLOCK_FREQ / 1_000_000) % 1_000_000 / 1000)
+    get_time_us() / 1000
 }
